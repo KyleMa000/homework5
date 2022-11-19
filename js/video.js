@@ -9,11 +9,15 @@ vid.playbackRate = 1;
 function playVid() {
     vid.play();
 }
+document.getElementById("play").addEventListener("click", playVid);
+
 
 //Pause Video
 function pauseVid() {
     vid.pause();
 }
+document.getElementById("pause").addEventListener("click", pauseVid);
+
 
 //Slow down
 function slowVid(){
@@ -25,6 +29,9 @@ function slowVid(){
     }
 }
 
+document.getElementById("slower").addEventListener("click", slowVid);
+
+
 //Speed Up
 function speedVid(){
     if (vid.playbackRate == 2){
@@ -34,6 +41,9 @@ function speedVid(){
         vid.playbackRate *= 2;
     }
 }
+
+document.getElementById("faster").addEventListener("click", speedVid);
+
 
 //Skip Ahead
 function skipVid(){
@@ -45,6 +55,9 @@ function skipVid(){
         vid.pause();
     }
 }
+
+document.getElementById("skip").addEventListener("click", skipVid);
+
 
 //Mute
 function muteVid(){
@@ -65,10 +78,13 @@ function muteVid(){
     }
 }
 
-//Volume Slider
-document.getElementById("slider").addEventListener("change", newspeed);
+document.getElementById("mute").addEventListener("click", muteVid);
 
+
+//Volume Slider
 function newspeed(){
     vid.volume = this.value / 100;
     document.getElementById("volume").textContent = vid.volume * 100 + "%";
 }
+
+document.getElementById("slider").addEventListener("change", newspeed);

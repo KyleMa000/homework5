@@ -9,11 +9,11 @@
 		<main>
 			<h1>JavaScript Video Controls</h1>
 			<div class="options">
-				<button onclick="playVid()" id="play">Play Video</button>
-				<button onclick="pauseVid()" id="pause">Pause Video</button>
-				<button onclick="slowVid()" id="slower">Slow Down</button>
-				<button onclick="speedVid()" id="faster">Speed Up</button>
-				<button onclick="skipVid()" id="skip">Skip Ahead</button>
+				<button id="play">Play Video</button>
+				<button id="pause">Pause Video</button>
+				<button id="slower">Slow Down</button>
+				<button id="faster">Speed Up</button>
+				<button id="skip">Skip Ahead</button>
 			</div>
 			<figure>
 				<video class="video"
@@ -27,7 +27,7 @@
 				</video>
 				<figcaption>[The Michigan Marching Band]</figcaption>
 			</figure>
-			<button onclick="muteVid()" id="mute">Mute</button><br>
+			<button id="mute">Mute</button><br>
 			<label for="slider">Volume</label>: 0
 			<input type="range" id="slider" min="0" max="100" value="100" step="10"> 100%<br>
 			<div>Volume is: <span id="volume"></span><br><br></div>
